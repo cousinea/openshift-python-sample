@@ -6,7 +6,7 @@ from welcome.views import index, health, headers, basic_questions, folder
 
 urlpatterns = [
     # Examples:
-    # url(r'^$', 'project.views.home', name='home'),
+    # url(r'^$', 'sample-app.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^$', index),
@@ -18,8 +18,8 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
 ]
 
-#if settings.DEBUG:
-#    import debug_toolbar
-#    urlpatterns = [
-#        url(r'^__debug__/', include(debug_toolbar.urls)),
-#    ] + urlpatterns
+if settings.DEBUG:
+   import debug_toolbar
+   urlpatterns = [
+       url(r'^__debug__/', include(debug_toolbar.urls)),
+   ] + urlpatterns
